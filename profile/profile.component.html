@@ -1,0 +1,511 @@
+<div class="top">
+  <!-- <span [matMenuTriggerFor]="menu" id="menu-icon" class="material-icons"
+    style="color:rgb(255, 255, 255); position: relative; top: 2vh;left:2vw;">menu</span> -->
+  <!-- <p align="right"> <button mat-raised-button color="accent" style=" position: relative; top: -2vh;margin-right:2vw;"
+      routerLink="/admin" *ngIf="user.is_admin==true">Admin</button>
+  </p> -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a class="nav-link" ><mat-icon>groups</mat-icon> Fantasy League</a><br> 
+      <mat-divider class="line"></mat-divider>
+
+      <a class="nav-link" ><mat-icon>try</mat-icon>Mark Entry in facility</a><br>
+      <mat-divider class="line"></mat-divider>
+
+      <a class="nav-link" ><mat-icon>booking</mat-icon>Booking Portal</a><br>
+      <mat-divider class="line"></mat-divider>
+
+      <a class="nav-link" ><mat-icon>logout</mat-icon> Logout</a><br>
+      <!-- (click)='drawer1.close()' -->
+    </ul>
+  </div>
+</nav>
+  <!-- <span [matMenuTriggerFor]="menu" id="menu-icon" class="material-icons"
+    style="color:rgb(255, 255, 255); position: relative; top: 2vh;left:2vw;">menu</span> -->
+</div>
+<div class="picture"> </div>
+
+<h3 style="text-align: center;color:white;position: relative;top:-5vh;">{{user.first_name}} </h3>
+
+<mat-divider class="line1"></mat-divider>
+
+
+<!--  <mat-drawer-container>
+    <mat-drawer role="navigation" #drawer1  mode="over">
+      <a class="nav-link" (click)='drawer1.close()'><mat-icon>groups</mat-icon> Fantasy League</a><br>
+      <a class="nav-link" (click)='drawer1.close()'><mat-icon>try</mat-icon>Mark Entry in facility</a><br>
+      <a class="nav-link" (click)='drawer1.close()'><mat-icon>booking</mat-icon>Booking Portal</a><br>
+      <a class="nav-link" (click)='drawer1.close()'><mat-icon>logout</mat-icon> Logout</a><br>
+     
+    </mat-drawer>-->
+
+
+
+
+
+<mat-menu #menu="matMenu" style="background-color: rgb(43,35,56);border-top: purple;">
+  <!-- <button mat-menu-item style="font-size: large;background-color: rgb(75, 61, 98);">
+    <mat-icon>groups</mat-icon> Fantasy League
+  </button> -->
+  <button mat-menu-item style="font-size: large;background-color: rgb(75, 61, 98)
+  ;">
+    <mat-icon>try</mat-icon><a style="color: white;" href="/qrcode">Mark Entry in facility</a>
+  </button>
+  <button mat-menu-item style="font-size: large;background-color: rgb(75, 61, 98)
+  ;">
+    <mat-icon>booking</mat-icon><a style="color: white;" href="/booking-portal">Booking Portal</a>
+  </button>
+  <button mat-menu-item style="font-size: large;background-color: rgb(75, 61, 98)
+  ;">
+    <mat-icon>logout</mat-icon> <a style="color: white;">Logout</a>
+  </button>
+</mat-menu>
+<!--<mat-drawer-content>-->
+
+
+
+
+
+<h4 style="color: white; position: relative; top: -4vh; text-align:center;">Events and Competitions</h4>
+<p>{{user.followed_events}}</p>
+
+<div class="container" dir="ltr">
+  <!-- <div class="blog-slider">
+    <div class="blog-slider__wrp swiper-wrapper">
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">26 December 2019</span>
+          <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+          <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
+          <a href="#" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">26 December 2019</span>
+          <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+          <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+          <a href="#" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+      
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">26 December 2019</span>
+          <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+          <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+          <a href="#" class="blog-slider__button">READ MORE</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="blog-slider__pagination"></div>
+  </div> -->
+  <!-- <div class="carousel-cell">
+    <p style="text-align: left; color: white; margin-bottom: 0%;">This Week</p>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="dots">
+      <div class="dot filled"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <p style="text-align: left; color: white; margin-bottom: 0%;">This Week</p>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="dots">
+      <div class="dot "></div>
+      <div class="dot filled"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <div class="carousel-cell">
+    <p style="text-align: left; color: white; margin-bottom: 0%;">This Week</p>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="tile">
+        <mat-card-header>
+
+        </mat-card-header>
+        <img mat-card-image src="../../assets/baskeylogo.png" alt="">
+        <mat-card-content>
+          <p>
+            15hrs
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot filled"></div>
+    </div>
+  </div> -->
+</div>
+
+<mat-divider class="line2"></mat-divider>
+
+<h4 style="color: white; position: relative; top: -1vh;text-align:center;">Fantasy League Scores</h4>
+<button mat-raised-button class="btn1"><span class="score">1021 </span><span
+    style="position:relative;top:2vh;">pts</span>
+  <mat-divider style="position: relative; top:1.5vh;right:1vw;"></mat-divider>
+  <div style="position:relative;bottom:-1vh;right:3vw;white-space: nowrap;">IPL Fantasy League</div>
+</button>
+<button mat-raised-button class="btn1"><span class="score">1021 </span><span
+    style="position:relative;top:2vh;">pts</span>
+  <mat-divider style="position: relative; top:1.5vh;right:1vw;color:black;"></mat-divider>
+  <div style="position:relative;bottom:-1vh;right:3vw;white-space: nowrap;">IPL Fantasy League</div>
+</button>
+<button mat-raised-button class="btn1"><span class="score">1021 </span><span
+  style="position:relative;top:2vh;">pts</span>
+<mat-divider style="position: relative; top:1.5vh;right:1vw;"></mat-divider>
+<div style="position:relative;bottom:-1vh;right:3vw;white-space: nowrap;">IPL Fantasy League</div>
+</button>
+<button mat-raised-button class="btn1"><span class="score">1021 </span><span
+  style="position:relative;top:2vh;">pts</span>
+<mat-divider style="position: relative; top:1.5vh;right:1vw;"></mat-divider>
+<div style="position:relative;bottom:-1vh;right:3vw;white-space: nowrap;">IPL Fantasy League</div>
+</button>
+<!--<button mat-raised-button class="btn1">IPL Fantasy League<mat-divider></mat-divider>2211 pts</button>-->
+<!--</mat-drawer-content>
+</mat-drawer-container>-->
+
+
+<!--Certificates section-->
+
+
+<mat-grid-list cols="4" rowHeight="100px" [gutterSize]="'20px'">
+  <mat-grid-tile *ngFor="let tile of shown_sports_tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+    style="background-color:white;" [routerLink]="['/sport', tile.title]">
+
+    <img [attr.src]="tile.color" style="object-fit:contain;width:200px;height:150px;">
+    <mat-grid-tile-footer>{{tile.title}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list id="hidden_sports" cols="4" rowHeight="100px" [@slideInOut]="animation_state2" [gutterSize]="'20px'">
+  <mat-grid-tile *ngFor="let tile of hidden_sports_tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+    style="background-color:white;" [routerLink]="['/sport', tile.title]">
+    <img [attr.src]="tile.color" style="object-fit:contain; height: 90%">
+
+    <mat-grid-tile-footer>{{tile.title}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+<div style="text-align:center; padding: 5%;">
+  <button mat-raised-button color="accent" id="toggle_button2" (click)="myfunc('toggle_button2')">Show More</button>
+</div>
+<mat-divider></mat-divider>
